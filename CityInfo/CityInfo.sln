@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityInfo", "CityInfo\CityInfo.csproj", "{855D0F93-B4DA-4ADB-B27B-AF797E5FC6F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityInfo.API", "CityInfo.API\CityInfo.API.csproj", "{DBB145E2-963E-43EB-A35D-962011C8AE14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{855D0F93-B4DA-4ADB-B27B-AF797E5FC6F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{855D0F93-B4DA-4ADB-B27B-AF797E5FC6F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{855D0F93-B4DA-4ADB-B27B-AF797E5FC6F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{855D0F93-B4DA-4ADB-B27B-AF797E5FC6F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBB145E2-963E-43EB-A35D-962011C8AE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBB145E2-963E-43EB-A35D-962011C8AE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBB145E2-963E-43EB-A35D-962011C8AE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBB145E2-963E-43EB-A35D-962011C8AE14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
