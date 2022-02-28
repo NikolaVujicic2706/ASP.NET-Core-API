@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore;
+﻿ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -15,6 +15,7 @@ namespace CityInfo.API
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
+            
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
@@ -22,3 +23,4 @@ namespace CityInfo.API
                 .UseStartup<Startup>();
     }
 }
+
