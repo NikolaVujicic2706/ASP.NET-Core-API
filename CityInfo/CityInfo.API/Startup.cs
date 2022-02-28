@@ -28,11 +28,7 @@ namespace CityInfo.API
 
             app.UseMvc();
 
-            app.Run((context) =>
-            {
-                //await context.Response.WriteAsync("Nikolin prvi ASP.NET Core projekat!");
-                throw new Exception("Example exampion");
-            });
+           
         }
     }
 }
