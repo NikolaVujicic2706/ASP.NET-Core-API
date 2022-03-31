@@ -25,7 +25,7 @@ namespace CityInfo.API.Controlers
 
         }
 
-        [HttpGet("{id}" , Name = "GetPointOfInterest")]
+        [HttpGet("{id}", Name = "GetPointOfInterest")]
 
         public IActionResult GetPointOfInterest(int cityId, int id)
         {
@@ -45,10 +45,10 @@ namespace CityInfo.API.Controlers
                 }
             }
             else
-            { 
+            {
                 return NotFound();
             }
-           
+
 
 
         }
@@ -57,7 +57,7 @@ namespace CityInfo.API.Controlers
         public IActionResult CreatePointOfInterest(int cityId,
             [FromBody] PointOfInterestForCreationDto pointOfInterest)
         {
-            
+
 
             var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
 
@@ -72,7 +72,7 @@ namespace CityInfo.API.Controlers
                              c => c.PointsOfInterest).Max(p => p.Id);
 
             var finalPointOfInterest = new PointOfInterestDto()
-            { 
+            {
                 Id = ++maxPointOfInterestId,
                 Name = pointOfInterest.Name,
                 Description = pointOfInterest.Description
@@ -86,6 +86,29 @@ namespace CityInfo.API.Controlers
                finalPointOfInterest);
         }
 
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletePointOfInterest(int cityId, int id)
+        {
+            var city = CitiesDataStore.Current.Cities
+                .FirstOrDefault(c => c.Id == cityId);
+            if (city == null)
+            {
+                return NotFound();
+            }
+
+            var pointOfInterestFromStore = city.PointsOfInterest
+                .FirstOrDefault(c => c.Id == id);
+            if (pointOfInterestFromStore == null)
+            {
+                return NotFound();
+            }
+
+            city.PointsOfInterest.Remove(pointOfInterestFromStore);
+
+            return NoContent();
+
+        }
 
     }
 }
